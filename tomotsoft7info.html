@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tomotsoft7 WEB</title>
+</head>
+<style>
+    .defolt {
+        color: white;
+    }
 
+    .favorite {
+        color: yellow;
+    }
+
+    .like {
+        color: pink;
+    }
+</style>
+<body style="background-color: black;">
+    <h1 style="font-family: seif;">tomotsoft7/h1>
+    <br>
+    <script src="tomotsoft7 Home.html"></script>
+    <div class="defolt" id="favorite"></div><div class="defolt" id="like"></div><a href="tomotsoft7 Home.html" download ></a>
+</body>
+</html>
+
+<script>
+    function createArea() {
+        const SE/*SE=starElement*/ = document.createElement('svg');
+        SE.id = 'star';
+        SE.innerHTML = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>;
+        SE.appendChild('favorite');
+
+    }
+
+    function createArea() {
+        const HE/*HE=heartElement*/ = document.createElement('svg');
+        HE.id = 'heart';
+        HE.innerHTML = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+</svg>
+        HE.appendChild('like');
+
+    }
+
+    {
+        const star = document.querySelector('star');
+        star.addEventListener('click' , () =>{
+            localStorage.favorite = Number +1;
+            star.classList.remove('defolt');
+            star.classList.add('favorite')
+            console.log('favorite.');
+
+            star.addEventListener('click' , ()=>{
+            star.classList.remove('favorite')
+            star.classList.add('defolt');
+                localStorage.favorite = Number -1;
+                console.log('not favorite.');
+            });
+        });
+    }
+
+    {
+        const like = document.querySelector('heart');
+        like.addEventListener('click' , () =>{
+            like.classList.remove('defolt')
+            like.classList.add('like');
+            localStorage.like = Number +1;
+            console.log('like.');
+
+            like.addEventListener('click' , ()=>{
+                like.classList.remove('like');
+                like.classList.add('defolt');
+                localStorage.like = Number -1;
+                console.log('not like.');
+            });
+        });
+    }
+</script>
